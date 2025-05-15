@@ -1,4 +1,4 @@
-if __name__ == "__main__":
+def main():
     # BMI計算
     try:
         height:int | float = int(input('請輸入你的身高(公分 cm):'))
@@ -29,3 +29,7 @@ if __name__ == "__main__":
             print('你已經中度肥胖')
         else:
             print('你已經重度肥胖')
+
+if __name__ == "__main__":
+    main()
+    
