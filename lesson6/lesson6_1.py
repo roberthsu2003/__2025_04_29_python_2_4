@@ -1,11 +1,11 @@
-def calculate_bmi(h:int | float, w:int):
+def calculate_bmi(h:int, w:int):
     bmicalculate = w / h ** 2
     return bmicalculate
 
 def main():
     # BMI計算
     try:
-        height:int | float = int(input('請輸入你的身高(公分 cm):'))
+        height:int = int(input('請輸入你的身高(公分 cm):'))
         if height < 120 or height > 220:
             raise Exception(f'輸入的身高: {height} 公分 不在 120 ~ 220 範圍內')
         height /= 100
