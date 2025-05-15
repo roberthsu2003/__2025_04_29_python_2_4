@@ -1,17 +1,19 @@
-def calculate_bmi(h:int, w:int):
-    bmicalculate = w / h ** 2
+def calculate_bmi(height:int, weight:int)->float:
+    if height < 120 or height > 220:
+            raise Exception(f'輸入的身高: {height} 公分 不在 120 ~ 220 範圍內')
+    height /= 100
+
+    if weight < 30.0 or weight > 200.0:
+            raise Exception(f'輸入的體重: {weight:.2f} 公斤 不在 30 ~ 200 範圍內')
+    
+    bmicalculate = weight / height ** 2
     return bmicalculate
 
 def main():
     # BMI計算
     try:
-        height:int = int(input('請輸入你的身高(公分 cm):'))
-        if height < 120 or height > 220:
-            raise Exception(f'輸入的身高: {height} 公分 不在 120 ~ 220 範圍內')
-        height /= 100
-        weight = eval(input('請輸入你的體重(公斤 kg):'))
-        if weight < 30.0 or weight > 200.0:
-            raise Exception(f'輸入的體重: {weight:.2f} 公斤 不在 30 ~ 200 範圍內')
+        height:int = int(input('請輸入你的身高(公分 cm):'))        
+        weight = eval(input('請輸入你的體重(公斤 kg):'))        
         bmi = calculate_bmi(height,weight)
     except ValueError:
         print('輸入發生錯誤')
