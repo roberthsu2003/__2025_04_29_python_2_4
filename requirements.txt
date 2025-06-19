@@ -3,3 +3,4 @@ numpy
 pandas
 matplotlib
 wget
+openpyxl
