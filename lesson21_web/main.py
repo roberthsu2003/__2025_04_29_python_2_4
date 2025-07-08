@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "<h1>您好, 全世界!</h1>"
+    return "<h1>這是上課用的網頁</h1>"
 
 @app.route("/user/<name>")
 def show_name(name):
