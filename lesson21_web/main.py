@@ -1,5 +1,4 @@
 from flask import Flask,request, abort
-from markupsafe import escape
 from google import genai
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError

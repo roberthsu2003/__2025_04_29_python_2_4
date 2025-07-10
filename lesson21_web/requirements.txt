@@ -1,3 +1,4 @@
 flask
 gunicorn
 google-genai
+line-bot-sdk
